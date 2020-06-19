@@ -11,7 +11,7 @@ package org.logan.java.concurrent;
  * since V 1.0 <br/>
  */
 
-class TestVolatileKey {
+class VolatileKeyTest {
 
 	// 在Java多线程的开发中有三种特性：原子性、可见性和有序性。
 	// volatile关键字使用场景：
@@ -72,7 +72,7 @@ class TestVolatileKey {
 			threads[i] = new Thread(() -> {
 
 				for (int j = 0; j < 10; j++) {
-					synchronized (TestVolatileKey.class) { // synchronized，确保原子性质
+					synchronized (VolatileKeyTest.class) { // synchronized，确保原子性质
 						System.out.println(++a);
 					}
 
